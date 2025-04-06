@@ -4,6 +4,12 @@ import tkinter as tk
 import time
 from tkinter import filedialog
 from ultralytics import YOLO
+import torch
+
+device = "cuda" if torch.cuda.is_available() else "cpu"
+print(f"CUDA available: {torch.cuda.is_available()}")
+if torch.cuda.is_available():
+    print(f"Using CUDA device: {torch.cuda.get_device_name(0)}")
 
 classNames = ['Incorrect_Mask', 'With_Mask', 'Without_Mask']
 box_colors = {
@@ -16,8 +22,11 @@ def start_detection(model_path, model_name):
     cap = cv2.VideoCapture(0)
     cap.set(3, 640)
     cap.set(4, 480)
-    model = YOLO(model_path)
+    model = YOLO(model_path).to(device)
     prev_time = time.time()
+    fps_list = []
+    last_fps_update = time.time()
+    display_fps = 0
 
     while True:
         success, img = cap.read()
@@ -62,10 +71,17 @@ def start_detection(model_path, model_name):
                     box_colors["Without_Mask"], 2)
 
         curr_time = time.time()
-        fps = 1 / (curr_time - prev_time)
+        fps = 1 / (curr_time - prev_time) if (curr_time - prev_time) > 0 else 0
+        fps_list.append(fps)
         prev_time = curr_time
 
-        cv2.putText(img, f"FPS: {int(fps)}", (20, 120), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
+        if curr_time - last_fps_update >= 1.0:
+            display_fps = int(sum(fps_list) / len(fps_list)) if fps_list else 0
+            fps_list.clear()
+            last_fps_update = curr_time
+
+        cv2.putText(img, f"FPS: {display_fps}", (20, 120),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 50, 255), 2)
 
         cv2.imshow(f'Webcam - {model_name}', img)
 
