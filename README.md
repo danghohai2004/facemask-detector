@@ -73,8 +73,8 @@ This project is licensed under the MIT License. Feel free to use, modify, and di
 
 ## 📬 Contact
 
-- **📧 Email** — [Liên hệ tôi](mailto:haicoin1324@gmail.com?subject=Hỏi về dự án&body=Chào bạn,%0A%0A)
-- **🌐 GitHub** — <a href="https://github.com/danghohai2004" target="_blank">[@danghohai2004](https://github.com/danghohai2004)</a>
+- 📧 **Email** — [Liên hệ tôi](mailto:haicoin1324@gmail.com?subject=Hỏi%20về%20dự%20án&body=Chào%20bạn%2C%0A%0A)
+- 🌐 **GitHub** — [@danghohai2004](https://github.com/danghohai2004)
 
 ---
 
