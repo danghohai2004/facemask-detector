@@ -73,7 +73,7 @@ This project is licensed under the MIT License. Feel free to use, modify, and di
 
 ## 📬 Contact
 
-- 📧 **Email** — [Liên hệ tôi](mailto:haicoin1324@gmail.com?subject=Hỏi%20về%20dự%20án&body=Chào%20bạn%2C%0A%0A)
+- 📧 **Email** — [contact me](mailto:haicoin1324@gmail.com?subject=Hỏi%20về%20dự%20án&body=Chào%20bạn%2C%0A%0AMình%20muốn%20hỏi%20về%20...)
 - 🌐 **GitHub** — [@danghohai2004](https://github.com/danghohai2004)
 
 ---
