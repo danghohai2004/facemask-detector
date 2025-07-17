@@ -1,48 +1,84 @@
-# Face Mask Detection Using YOLOv10s
-## Project Overview
-This project focuses on detecting the status of face mask usage in real-time using the YOLOv10s model. The system classifies individuals into three categories:
+# 😷 Face Mask Detection with YOLOv10s
 
-* With Mask – Properly wearing a face mask.
+## 🚀 Project Overview
+A lightweight, real-time system for detecting mask usage status using the YOLOv10s model. It classifies individuals into three categories:
 
-* Without Mask – No face mask detected.
+- 🟢 With Mask — correctly worn mask.
+- 🔵 Without Mask — no mask detected.
+- 🔴 Mask Worn Incorrectly — mask not covering nose/mouth properly.
 
-* Mask Worn Incorrectly – The mask is not worn correctly (e.g., below the nose).
-## Introduction
-### Input:
-* Live Video Stream (via webcam)
+## 🎯 Goals
+- Real-time inference via webcam or image input.
+- Confidence scores for each prediction.
+- Annotated visual output for both images and video streams.
+- Status counter for total predictions by category.
 
-* Image Files (JPG, PNG, etc.)
+---
 
-### Output:
-* Annotated Video Stream (with bounding boxes and labels: "With Mask", "Without Mask", "Incorrect Mask")
+## 🧠 Dataset
 
-* Detection Confidence Score
+**Source: [Face Mask Detection-2 (Roboflow)](https://universe.roboflow.com/ammar-workspace/face-mask-detection-2-oezvq/dataset/4/download)**  
+- Total images: 4,976  
+- Categories: `With_Mask`, `Without_Mask`, `Incorrect_Mask`  
+- Splits:  
+  - Training: 3,790  
+  - Validation: 732  
+  - Testing: 454  
 
-* Processed images/videos with bounding boxes
-## Introducing the dataset
-The dataset used is “Face Mask Detection-2 Computer Vision
-Project”, which consists of 4,976 images collected from Roboflow. The dataset includes 3 labels:
-“Incorrect_Mask”, “With_Mask” and “Without_Mask”, each label is clearly annotated
-. The data is divided into three sets: train, validation and test, with the number of images being 3,790
-for the training set, 732 for the validation set and 454 for the test set, respectively.
+---
 
-  👉 Link Dataset: https://universe.roboflow.com/ammar-workspace/face-mask-detection-2-oezvq/dataset/4/download
-## Predict in real time
-This video uses a laptop webcam to predict whether a person is wearing a mask
+## ⏱️ Real-Time Webcam Demo
+This video uses a laptop webcam to predict whether a person is wearing a mask.
 
 ![Demo](demo/mask_detection.gif)
-## Predict in images
+
+---
+
+## 🖼️ Predict on Static Images
 The predicted image will display the corresponding prediction results. Users just need to upload the image, and the model will classify the mask-wearing status of the person in the image (correct, incorrect, or no mask).
 
 ![Example Prediction](demo/pre1.jpg)
-
 ![Example Prediction](demo/pre2.jpg)
-## Installation & Setup
+
+---
+
+## 📂 File Structure
+- [model_training.ipynb](./model_training.ipynb)  
+- [best.pt](./best.pt)  
+- [mask_detection.py](./mask_detection.py)  
+- [demo](./demo)  
+  - [mask_detection.gif](./demo/mask_detection.gif)  
+  - [pre1.jpg](./demo/pre1.jpg)  
+  - [pre2.jpg](./demo/pre2.jpg)  
+- [requirements.txt](./requirements.txt)
+- [README.md](./README.md)
+
+---
+
+## 🔧 Installation & Setup
 ### Clone the Repository
     git clone https://github.com/danghohai2004/FaceMaskDetection-YOLOv10s.git
     cd FaceMaskDetection-YOLOv10s
 ### Install Dependencies (Python 3.9.12)
     pip install -r requirements.txt
-### Run Mask Detection code in real time
+### Run Real-Time Detection
     python mask_detection.py
-# Thank you for watching
+
+---
+
+## 📜 License
+This project is licensed under the MIT License. Feel free to use, modify, and distribute.
+
+---
+
+## 📬 Contact
+
+- **📧 Email** — [Liên hệ tôi](mailto:haicoin1324@gmail.com?subject=Hỏi về dự án&body=Chào bạn,%0A%0A)
+- **🌐 GitHub** — <a href="https://github.com/danghohai2004" target="_blank">[@danghohai2004](https://github.com/danghohai2004)</a>
+
+---
+
+# Thank you for your interest in this project!
+
+
+
