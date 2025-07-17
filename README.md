@@ -73,7 +73,7 @@ This project is licensed under the MIT License. Feel free to use, modify, and di
 
 ## 📬 Contact
 
-- 📧 **Email** — [contact me](mailto:haicoin1324@gmail.com?subject=H%E1%BB%8Fi%20v%E1%BB%81%20d%E1%BB%B1%20%C3%A1n%20Face%20Mask%20Detection)
+- 📧 **Email** — [contact me](mailto:dhhaics2004@gmail.com?subject=H%E1%BB%8Fi%20v%E1%BB%81%20d%E1%BB%B1%20%C3%A1n%20Face%20Mask%20Detection)
 - 🌐 **GitHub** — [@danghohai2004](https://github.com/danghohai2004)
 
 ---
