@@ -22,7 +22,7 @@ def start_detection(model_path, model_name):
     cap = cv2.VideoCapture(0)
     cap.set(3, 640)
     cap.set(4, 480)
-    model = YOLO(model_path).to(device)
+    model = YOLO(model_path)
     prev_time = time.time()
     fps_list = []
     last_fps_update = time.time()
@@ -35,7 +35,7 @@ def start_detection(model_path, model_name):
 
         counts = {"Incorrect_Mask": 0, "With_Mask": 0, "Without_Mask": 0}
 
-        results = model(img, stream=True)
+        results = model.predict(source=img, device=0)
 
         for r in results:
             boxes = r.boxes
