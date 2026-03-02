@@ -30,4 +30,4 @@ def evaluate(data_yaml_name:str, model_name:str):
     print("Recall:", metrics.box.r)
 
 if __name__ == "__main__":
-    export(model_name = "best_test6.pt")
+    export(model_name = "best.pt")
