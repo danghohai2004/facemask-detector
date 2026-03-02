@@ -111,7 +111,7 @@ The predicted image will display the corresponding prediction results. Users jus
 ## 🔧 Installation & Setup
 ### Clone the Repository
     git clone https://github.com/danghohai2004/facemask-detector.git
-    cd facemask_detector
+    cd facemask-detector   
 ### Install Dependencies (Python 3.9.12)
     pip install -r requirements.txt
 ### Run Real-Time Detection
