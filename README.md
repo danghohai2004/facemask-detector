@@ -54,6 +54,22 @@ Improved minority-class stability without removing majority data.
 
 ---
 
+## Training Performance
+The following metrics were recorded during training and evaluated on the validation set:
+
+- **mAP@0.5:** **0.954**  
+- **mAP@0.75:** **0.70**  
+- **mAP@0.5:0.95:** **0.62**  
+- **Precision (avg):** **0.959**  
+- **Recall (avg):** **0.920**
+
+![Training Results](demo/scalar_plot.png)
+
+### Inference Performance
+- **`.pt` (PyTorch): ~20 FPS**
+- 
+---
+
 ## Model Export and Deployment
 The trained model was exported for cross-platform deployment:
 
@@ -61,13 +77,19 @@ The trained model was exported for cross-platform deployment:
 - TensorRT engine for optimized GPU inference.
 
 ### Benchmark (Personal Laptop)
+**Hardware**
 - CPU: Ryzen 7 5800H  
 - GPU: NVIDIA RTX 3050 Laptop GPU  
 
-Performance comparison:
+**Model Accuracy (Validation Set)**
+- **mAP@0.5:** **0.954**  
+- **mAP@0.75:** **0.70**  
+- **mAP@0.5:0.95:** **0.62**  
+- **Precision (avg):** **0.94**  
+- **Recall (avg):** **0.921**
 
-- `.pt` (PyTorch): ~20 FPS  
-- `.engine` (TensorRT, FP16): ~30 FPS  
+**Inference Performance**
+- **`.engine` (TensorRT, FP16): ~30 FPS**
 
 The TensorRT model was exported with FP16 quantization to reduce computational cost while maintaining stable accuracy. In practical testing, the FP16 engine version delivered smoother and more stable real-time inference compared to the original `.pt` model.
 
