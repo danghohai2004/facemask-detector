@@ -112,7 +112,14 @@ The predicted image will display the corresponding prediction results. Users jus
 ### Clone the Repository
     git clone https://github.com/danghohai2004/facemask-detector.git
     cd facemask-detector   
-### Install Dependencies (Python 3.9.12)
+### Set up Virtual Environment and Install Dependencies
+    # 1. Create a virtual environment
+    python -m venv .venv
+
+    # 2. Activate the virtual environment
+    .\.venv\Scripts\Activate.ps1
+
+    # 3. Install required packages
     pip install -r requirements.txt
 ### Run Real-Time Detection
     python mask_detection.py
