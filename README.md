@@ -67,7 +67,7 @@ The following metrics were recorded during training and evaluated on the validat
 
 ### Inference Performance
 - **`.pt` (PyTorch): ~20 FPS**
-- 
+
 ---
 
 ## Model Export and Deployment
