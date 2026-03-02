@@ -6,7 +6,7 @@ This project builds a real-time, automated face mask detection system to reduce 
 ---
 
 ## Project Overview
-This project presents a lightweight, real-time face mask detection system built on the YOLO model. The system is designed to automatically detect and classify mask-wearing status from live video streams with the highest possible efficiency and accuracy.
+This project presents a lightweight, real-time face mask detection system built on the YOLOv8m model. The system is designed to automatically detect and classify mask-wearing status from live video streams with the highest possible efficiency and accuracy.
 - With Mask — Mask worn correctly
 - Without Mask — No mask detected
 - Mask Worn Incorrectly — Mask not covering nose/mouth properly 
